@@ -1,28 +1,57 @@
 <!doctype html>
+
 <head>
   <style>
+    :root {
+      --container-margin: .75rem;
+    }
+
     body {
       background-color: #eee;
       font-family: Helvetica, Arial, sans-serif;
     }
 
+    .container {
+      
+    }
+
     header {
+      
+      padding: var(--container-margin);
+      margin-bottom: 1rem;
       color: #fff;
       background-color: #0072b0;
       border-radius: .5em;
+
     }
 
     .main {
+      box-sizing: border-box;
+      float: left;
+      width: 70%;
+      padding: var(--container-margin);
       background-color: #fff;
       border-radius: .5em;
     }
 
     .sidebar {
+      box-sizing: border-box;
+      float: left;
+      width: calc(30% -1.5em);
+      margin-left: 1.5em;
       padding: 1.5em;
       background-color: #fff;
       border-radius: .5em;
     }
 
+    .sidebar {}
+
+    .main>.widget {
+      margin-bottom: 1rem;
+      padding: 1rem;
+      background-color: #f8f8f8;
+      border-radius: .5em;
+    }
   </style>
 </head>
 
@@ -40,9 +69,15 @@
       </p>
     </main>
     <aside class="sidebar">
-      <div class="widget"></div>
-      <div class="widget"></div>
-      <div class="gizmo"></div>
+      <div class="widget">
+        1
+      </div>
+      <div class="widget">
+        2
+      </div>
+      <div class="gizmo">
+        3
+      </div>
     </aside>
   </div>
 </body>

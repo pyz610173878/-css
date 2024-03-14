@@ -1,0 +1,72 @@
+<input type="text" id="searchBox" placeholder="请输入搜索内容">
+<div id="suggestions" class="suggestions"></div>
+
+
+
+<div class="container" onclick="addParagraph()">
+    这是一个很长的文本，这是一个很长的文本，这是一个很长的文本，
+</div>
+
+<style>
+
+</style>
+
+<div style="height: 100px; border: 1px black solid;">123</div>
+<style>
+    .suggestions {
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+
+    .container {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        overflow-y: auto;
+    }
+
+    .suggestions li {
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .suggestions li:hover {
+        background-color: #eee;
+    }
+</style>
+
+<script>
+    function addParagraph() {
+        // 创建一个新的 p 元素
+        var newParagraph = document.createElement('p');
+        // 设置 p 元素的内容
+        newParagraph.textContent = '100000000000000000000';
+        // 将新的 p 元素添加到 .container 中
+        document.querySelector('.container').appendChild(newParagraph);
+    }
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        var searchBox = document.getElementById('searchBox');
+        var suggestionsBox = document.getElementById('suggestions');
+
+        searchBox.addEventListener('input', function () {
+            var searchQuery = searchBox.value.toLowerCase();
+            var suggestions = ['苹果', '香蕉', '橙子', '草莓', '葡萄'].filter(function (item) {
+                return item.toLowerCase().includes(searchQuery);
+            });
+
+            suggestionsBox.innerHTML = '';
+            suggestions.forEach(function (suggestion) {
+                var li = document.createElement('li');
+                li.textContent = suggestion;
+                li.onclick = function () {
+                    searchBox.value = suggestion;
+                    suggestionsBox.innerHTML = '';
+                };
+                suggestionsBox.appendChild(li);
+            });
+        });
+    });
+
+</script>

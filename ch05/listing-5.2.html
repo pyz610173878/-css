@@ -1,4 +1,5 @@
 <!doctype html>
+
 <head>
   <style>
     :root {
@@ -16,13 +17,30 @@
       font-family: Helvetica, Arial, sans-serif;
     }
 
-    body * + * {
+    body *+* {
       margin-top: 1.5em;
     }
 
     .container {
+      /* display: flex; */
       max-width: 1080px;
       margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: baseline;
+      padding-left: 0;
+      list-style-type: none;
+      background-color: #5f4b44;
+    }
+
+    .nav-right {
+      float: right;
     }
   </style>
 </head>
@@ -56,13 +74,11 @@
             <h3>Login</h3>
             <p>
               <label for="username">Username</label>
-              <input id="username" type="text"
-                name="username"/>
+              <input id="username" type="text" name="username" />
             </p>
             <p>
               <label for="password">Password</label>
-              <input id="password" type="password"
-                name="password"/>
+              <input id="password" type="password" name="password" />
             </p>
             <button type="submit">Login</button>
           </form>

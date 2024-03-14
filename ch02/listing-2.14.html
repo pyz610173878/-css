@@ -2,7 +2,11 @@
 <head>
   <style>
     :root {
-      font-size: 0.875em;
+      font-size: 0.875em; 
+      /* 相当于14px */
+      /* 假如你的文章想设置为12px对应的em单位，那么你就用12去除以你的跟元素的px单位，也就是14。取货码三位小数即可 */
+      /* 这有什么好处呢？比如领导说，你这个字体太小了，我想要大一点，文章大一点，想设置成14px,然后标题18px在小一点。 */
+      /* 你只需要改动这两个值，整个项目的文字就全部改动完毕了，你看这个维护性多好。如果你一个个组件设置 */
     }
 
     body {
@@ -32,5 +36,9 @@
       in <a href="/batch-size.html">small batches</a> to maximize their
       potential.
     </div>
+
+
+    <p style="font-size: 12px;">123</p>
+    <p style="font-size: 0.857em;">123</p>
   </div>
 </body>

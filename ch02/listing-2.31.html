@@ -67,10 +67,16 @@
   <script type="text/javascript">
   let rootElement = document.documentElement;
 let styles = getComputedStyle(rootElement);
+// 元素的样式是一个对象，可以通过getPropertyValue方法获取属性值
+console.log(styles);
 let mainColor = styles.getPropertyValue('--main-bg');
+let mainBg = styles.getPropertyValue('--main-color');
+let mainContainerMargin = styles.getPropertyValue('--main-container-margin');
 console.log(String(mainColor).trim());
+// 剔除属性值两端的空白字符
 
 rootElement = document.documentElement;
 rootElement.style.setProperty('--main-bg', '#cdf');
+// 重新设置--main-bg的值
 </script>
 </body>

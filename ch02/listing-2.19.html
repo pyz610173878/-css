@@ -1,22 +1,27 @@
 <!doctype html>
+
 <head>
   <style>
     :root {
-      font-size: calc(0.5em + 1vw);
+      --font-size: calc(0.5em + 1vw);
+      --main-bg-color: #f8f8f8;
+      --main-text-color: #333;
+      --main-container-mragin: 1rem;
     }
 
     body {
       font-family: Helvetica, Arial, sans-serif;
+      --main-text-color: red;
     }
 
     .panel {
-      font-size: 1rem;
+      font-size: var(--font-size);
       padding: 1em;
       border: 1px solid #999;
       border-radius: 0.5em;
     }
 
-    .panel > h2 {
+    .panel>h2 {
       margin-top: 0;
       font-size: 0.8em;
       font-weight: bold;
@@ -25,6 +30,10 @@
 
     .panel.large {
       font-size: 1.2em;
+    }
+
+    .body a {
+      color: var(--main-text-color);
     }
   </style>
 </head>

@@ -13,20 +13,25 @@
 
   .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 0.5em;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 0.5em; /** 垂直 与 水平*/
+    border-radius: 0.5em;
   }
 
   .grid > * {
-    background-color: darkgray;
+     background-color: darkgray;
     color: white;
     padding: 2em;
     border-radius: 0.5em;
+  } 
+  .container {
+    padding-top: 0,5em;
+    padding-bottom: 0.5em;
   }
   </style>
 </head>
 <body>
+  <div class="container">
   <div class="grid">
     <div class="a">a</div>
     <div class="b">b</div>
@@ -34,5 +39,38 @@
     <div class="d">d</div>
     <div class="e">e</div>
     <div class="f">f</div>
+    <!-- <div class="left">
+      <div class="logo">
+        logo
+      </div>
+      <div class="title">技术管理系统</div>
+    </div>
+    <div class="mean">
+      <ul>
+        <li>我的工作台</li>
+        <li>施工组织设计</li>
+        <li>设计技术</li>
+        <li>采购技术</li>
+        <li>施工技术</li>
+        <li>焊接管理</li>
+        <li>技术人员管理</li>
+        <li>知识管理</li>
+        <li>科研管理</li>
+        <li>系统管理</li>
+      </ul>
+
+    </div>
+    <div class="header-right">
+      <div class="gn">
+        全屏
+      </div>
+      <div class="icon">头像</div>
+      <div class="name">
+        张三
+      </div> -->
+    </div>
+
+    
   </div>
+</div>
 </body>
